@@ -198,7 +198,7 @@
         <!--Programmatically-->
         <scene sceneID="POE-Au-LGw">
             <objects>
-                <viewController id="QXI-oi-WtN" customClass="ATLProgramatical1ViewController" customModule="AutolayoutExanples" sceneMemberID="viewController">
+                <viewController id="QXI-oi-WtN" customClass="ATLProgramatical1ViewController" customModule="AutolayoutExamples" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hfw-FS-jqg"/>
                         <viewControllerLayoutGuide type="bottom" id="g7h-Wu-nPU"/>

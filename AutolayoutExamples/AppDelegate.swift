@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  AutolayoutExanples
+//  AutolayoutExamples
 //
 //  Created by Pham Chi Cong on 6/5/16.
 //  Copyright © 2016 Pham Chi Cong. All rights reserved.

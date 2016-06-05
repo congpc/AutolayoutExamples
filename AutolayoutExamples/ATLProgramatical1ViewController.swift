@@ -1,6 +1,6 @@
 //
 //  ATLProgramatical1ViewController.swift
-//  AutolayoutExanples
+//  AutolayoutExamples
 //
 //  Created by Pham Chi Cong on 6/5/16.
 //  Copyright © 2016 Pham Chi Cong. All rights reserved.
@@ -10,7 +10,7 @@ import UIKit
 
 class ATLProgramatical1ViewController: UIViewController {
     //0: Using NSLayoutConstraint, 1: Using VisualFormatLanguage, 2: Using NSLayoutAnchor (iOS 9)
-    var constaintType = 1
+    var constaintType = 0
     var isIOS9 = false
     
     override func viewDidLoad() {
