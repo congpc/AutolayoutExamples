@@ -12,7 +12,6 @@
 		00BDB9B91D046AD500B10EC0 /* ATLProgramatical1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BDB9B11D046AD500B10EC0 /* ATLProgramatical1ViewController.swift */; };
 		00BDB9BA1D046AD500B10EC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00BDB9B21D046AD500B10EC0 /* LaunchScreen.storyboard */; };
 		00BDB9BB1D046AD500B10EC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00BDB9B41D046AD500B10EC0 /* Main.storyboard */; };
-		00BDB9BC1D046AD500B10EC0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00BDB9B61D046AD500B10EC0 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,7 +122,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00BDB9BC1D046AD500B10EC0 /* Info.plist in Resources */,
 				00BDB9BB1D046AD500B10EC0 /* Main.storyboard in Resources */,
 				00BDB9B81D046AD500B10EC0 /* Assets.xcassets in Resources */,
 				00BDB9BA1D046AD500B10EC0 /* LaunchScreen.storyboard in Resources */,

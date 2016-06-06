@@ -10,8 +10,8 @@ import UIKit
 
 class ATLProgramatical1ViewController: UIViewController {
     //0: Using NSLayoutConstraint, 1: Using VisualFormatLanguage, 2: Using NSLayoutAnchor (iOS 9)
-    var constaintType = 0
-    var isIOS9 = false
+    var constaintType: Int8 = 0
+    var isIOS9: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,12 +19,15 @@ class ATLProgramatical1ViewController: UIViewController {
             self.isIOS9 = true
         }
         // Default left margin and right margin = 20 px
+        //1
         self.createLeftTopLabel()
         self.createLeftBottomLabel()
-        self.createLeftCenterYLabel()
-        self.createCenterXTopLabel()
         self.createRightTopLabel()
         self.createRightBottomLabel()
+        
+        //2
+        self.createLeftCenterYLabel()
+        self.createCenterXTopLabel()
         self.createRightCenterYLabel()
         self.createCenterXBottomLabel()
         self.createCenterLabel()
@@ -34,7 +37,8 @@ class ATLProgramatical1ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    //MARK: - Corner pins
     func createLeftTopLabel() {
         //Create label
         let label = UILabel()
@@ -115,87 +119,6 @@ class ATLProgramatical1ViewController: UIViewController {
             NSLayoutConstraint.activateConstraints(allConstraints)
         }
     }
-    func createLeftCenterYLabel() {
-        //Create label
-        let label = UILabel()
-        label.text = "Left CenterY"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = UIColor.yellowColor()
-        self.view.addSubview(label)
-        
-        //Config constraints
-        switch constaintType {
-        case 0:
-            // Creating constraints using NSLayoutConstraint: from iOS 6.0
-            NSLayoutConstraint(item: label, attribute: .Leading, relatedBy: .Equal, toItem: self.view,
-                               attribute: .LeadingMargin, multiplier: 1.0, constant: 0).active = true
-            
-            NSLayoutConstraint(item: label, attribute: .CenterY, relatedBy: .Equal, toItem: self.view,
-                               attribute: .CenterY, multiplier: 1.0, constant: 20.0).active = true
-        case 2 where self.isIOS9 == true:
-            if #available(iOS 9.0, *) {
-                // Creating the same constraints using Layout Anchors: from iOS 9.0
-                let margins = view.layoutMarginsGuide
-                label.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor).active = true
-                
-                let bottomLayoutGuide = self.bottomLayoutGuide
-                bottomLayoutGuide.topAnchor.constraintEqualToAnchor(label.bottomAnchor, constant: 20.0).active = true
-            }
-        default:
-            // Creating constraints using Visual Format Language: from iOS 6.0
-            let metrics = ["padding":20.0]
-            let views : [String : AnyObject] = ["label": label,"bottomLayoutGuide": bottomLayoutGuide]
-            var allConstraints = [NSLayoutConstraint]()
-            let constraint1 = NSLayoutConstraint.constraintsWithVisualFormat("H:|-padding-[label]",
-                                                                             options: [], metrics: metrics, views: views)
-            allConstraints += constraint1
-            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:|-[label]-|",
-                                                                             options: .AlignAllCenterY, metrics: metrics, views: views)
-            allConstraints += constraint2
-            NSLayoutConstraint.activateConstraints(allConstraints)
-        }
-    }
-    func createCenterXTopLabel() {
-        //Create label
-        let label = UILabel()
-        label.text = "CenterX Top"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = UIColor.yellowColor()
-        self.view.addSubview(label)
-        
-        //Config constraints
-        switch constaintType {
-        case 0:
-            // Creating constraints using NSLayoutConstraint: from iOS 6.0
-            NSLayoutConstraint(item: label, attribute: .CenterX, relatedBy: .Equal, toItem: self.view,
-                               attribute: .CenterX, multiplier: 1.0, constant: 0).active = true
-            
-            NSLayoutConstraint(item: label, attribute: .Top, relatedBy: .Equal, toItem: self.topLayoutGuide,
-                               attribute: .Bottom, multiplier: 1.0, constant: 20.0).active = true
-        case 2 where self.isIOS9 == true:
-            if #available(iOS 9.0, *) {
-                // Creating the same constraints using Layout Anchors: from iOS 9.0
-                let margins = view.layoutMarginsGuide
-                label.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor).active = true
-                
-                let topLayoutGuide = self.topLayoutGuide
-                label.topAnchor.constraintEqualToAnchor(topLayoutGuide.bottomAnchor, constant: 20.0).active = true
-            }
-        default:
-            // Creating constraints using Visual Format Language: from iOS 6.0
-            let metrics = ["padding":20.0]
-            let views : [String : AnyObject] = ["label": label,"topLayoutGuide": topLayoutGuide]
-            var allConstraints = [NSLayoutConstraint]()
-            let constraint1 = NSLayoutConstraint.constraintsWithVisualFormat("H:|-padding-[label]",
-                                                                             options: [], metrics: metrics, views: views)
-            allConstraints += constraint1
-            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[topLayoutGuide]-padding-[label]",
-                                                                             options: [], metrics: metrics, views: views)
-            allConstraints += constraint2
-            NSLayoutConstraint.activateConstraints(allConstraints)
-        }
-    }
-    
     func createRightTopLabel() {
         //Create label
         let label = UILabel()
@@ -276,6 +199,89 @@ class ATLProgramatical1ViewController: UIViewController {
             NSLayoutConstraint.activateConstraints(allConstraints)
         }
     }
+    
+    //MARK: - Center pins
+    func createLeftCenterYLabel() {
+        //Create label
+        let label = UILabel()
+        label.text = "Left CenterY"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = UIColor.yellowColor()
+        self.view.addSubview(label)
+        
+        //Config constraints
+        switch constaintType {
+        case 0:
+            // Creating constraints using NSLayoutConstraint: from iOS 6.0
+            NSLayoutConstraint(item: label, attribute: .Leading, relatedBy: .Equal, toItem: self.view,
+                               attribute: .LeadingMargin, multiplier: 1.0, constant: 0).active = true
+            
+            NSLayoutConstraint(item: label, attribute: .CenterY, relatedBy: .Equal, toItem: self.view,
+                               attribute: .CenterY, multiplier: 1.0, constant: 20.0).active = true
+        case 2 where self.isIOS9 == true:
+            if #available(iOS 9.0, *) {
+                // Creating the same constraints using Layout Anchors: from iOS 9.0
+                let margins = view.layoutMarginsGuide
+                label.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor).active = true
+                
+                label.centerYAnchor.constraintEqualToAnchor(margins.centerYAnchor).active = true
+            }
+        default:
+            // Creating constraints using Visual Format Language: from iOS 6.0
+            let metrics = ["padding":20.0]
+            let views : [String : AnyObject] = ["label": label,"bottomLayoutGuide": bottomLayoutGuide]
+            var allConstraints = [NSLayoutConstraint]()
+            let constraint1 = NSLayoutConstraint.constraintsWithVisualFormat("H:|-padding-[label]",
+                                                                             options: [], metrics: metrics, views: views)
+            allConstraints += constraint1
+            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:|-[label]-|",
+                                                                             options: .AlignAllCenterY, metrics: metrics, views: views)
+            allConstraints += constraint2
+            NSLayoutConstraint.activateConstraints(allConstraints)
+        }
+    }
+    func createCenterXTopLabel() {
+        //Create label
+        let label = UILabel()
+        label.text = "CenterX Top"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = UIColor.yellowColor()
+        self.view.addSubview(label)
+        
+        //Config constraints
+        switch constaintType {
+        case 0:
+            // Creating constraints using NSLayoutConstraint: from iOS 6.0
+            NSLayoutConstraint(item: label, attribute: .CenterX, relatedBy: .Equal, toItem: self.view,
+                               attribute: .CenterX, multiplier: 1.0, constant: 0).active = true
+            
+            NSLayoutConstraint(item: label, attribute: .Top, relatedBy: .Equal, toItem: self.topLayoutGuide,
+                               attribute: .Bottom, multiplier: 1.0, constant: 20.0).active = true
+        case 2 where self.isIOS9 == true:
+            if #available(iOS 9.0, *) {
+                // Creating the same constraints using Layout Anchors: from iOS 9.0
+                let margins = view.layoutMarginsGuide
+                label.centerXAnchor.constraintEqualToAnchor(margins.centerXAnchor).active = true
+                
+                let topLayoutGuide = self.topLayoutGuide
+                label.topAnchor.constraintEqualToAnchor(topLayoutGuide.bottomAnchor, constant: 20.0).active = true
+            }
+        default:
+            // Creating constraints using Visual Format Language: from iOS 6.0
+            let metrics = ["padding":20.0]
+            let views : [String : AnyObject] = ["label": label,"topLayoutGuide": topLayoutGuide]
+            var allConstraints = [NSLayoutConstraint]()
+            let constraint1 = NSLayoutConstraint.constraintsWithVisualFormat("H:|-padding-[label]",
+                                                                             options: [], metrics: metrics, views: views)
+            allConstraints += constraint1
+            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[topLayoutGuide]-padding-[label]",
+                                                                             options: [], metrics: metrics, views: views)
+            allConstraints += constraint2
+            NSLayoutConstraint.activateConstraints(allConstraints)
+        }
+    }
+    
+    
     func createRightCenterYLabel() {
         //Create label
         let label = UILabel()
@@ -297,10 +303,9 @@ class ATLProgramatical1ViewController: UIViewController {
             if #available(iOS 9.0, *) {
                 // Creating the same constraints using Layout Anchors: from iOS 9.0
                 let margins = view.layoutMarginsGuide
-                label.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor).active = true
+                label.trailingAnchor.constraintEqualToAnchor(margins.trailingAnchor).active = true
                 
-                let bottomLayoutGuide = self.bottomLayoutGuide
-                bottomLayoutGuide.topAnchor.constraintEqualToAnchor(label.bottomAnchor, constant: 20.0).active = true
+                label.centerYAnchor.constraintEqualToAnchor(margins.centerYAnchor).active = true
             }
         default:
             // Creating constraints using Visual Format Language: from iOS 6.0
@@ -337,10 +342,10 @@ class ATLProgramatical1ViewController: UIViewController {
             if #available(iOS 9.0, *) {
                 // Creating the same constraints using Layout Anchors: from iOS 9.0
                 let margins = view.layoutMarginsGuide
-                label.trailingAnchor.constraintEqualToAnchor(margins.trailingAnchor).active = true
+                label.centerXAnchor.constraintEqualToAnchor(margins.centerXAnchor).active = true
                 
-                let topLayoutGuide = self.bottomLayoutGuide
-                topLayoutGuide.topAnchor.constraintEqualToAnchor(label.bottomAnchor, constant: 20.0).active = true
+                let bottomLayoutGuide = self.bottomLayoutGuide
+                bottomLayoutGuide.topAnchor.constraintEqualToAnchor(label.bottomAnchor,constant: 20).active = true
             }
         default:
             // Creating constraints using Visual Format Language: from iOS 6.0
@@ -378,10 +383,9 @@ class ATLProgramatical1ViewController: UIViewController {
             if #available(iOS 9.0, *) {
                 // Creating the same constraints using Layout Anchors: from iOS 9.0
                 let margins = view.layoutMarginsGuide
-                label.trailingAnchor.constraintEqualToAnchor(margins.trailingAnchor).active = true
+                label.centerXAnchor.constraintEqualToAnchor(margins.centerXAnchor).active = true
                 
-                let topLayoutGuide = self.bottomLayoutGuide
-                topLayoutGuide.topAnchor.constraintEqualToAnchor(label.bottomAnchor, constant: 20.0).active = true
+                label.centerYAnchor.constraintEqualToAnchor(margins.centerYAnchor).active = true
             }
         default:
             // Creating constraints using Visual Format Language: from iOS 6.0
