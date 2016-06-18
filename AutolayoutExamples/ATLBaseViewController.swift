@@ -8,30 +8,35 @@
 
 import UIKit
 
-class ATLBaseViewController: UIViewController {
+public class ATLBaseViewController: UIViewController {
     //0: Using NSLayoutConstraint, 1: Using VisualFormatLanguage, 2: Using NSLayoutAnchor (iOS 9)
-    var constaintType: Int8 = 2
+    var constaintType: Int8 = 0
     
     var isIOS9: Bool = false
     let metrics = ["margin":16.0] // Default left margin and right margin = 16 or 20 px
     var margin:CGFloat = 16.0
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         if #available(iOS 9.0, *) {
             self.isIOS9 = true
         }
     }
 
-    override func didReceiveMemoryWarning() {
+    override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    public func configConstaintType(type:Int8) {
+        constaintType = type
     }
     
     func createLabel(text: String,_ tag:Int,_ color:UIColor) -> UILabel {
         //Create label
         let label = UILabel()
         label.text = text
+        label.font = UIFont(name: "HelveticaNeue", size: 17)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = color
         label.tag = tag
@@ -59,7 +64,7 @@ class ATLBaseViewController: UIViewController {
                 view.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor).active = true
                 
                 let topLayoutGuide = self.topLayoutGuide
-                view.topAnchor.constraintEqualToAnchor(topLayoutGuide.bottomAnchor, constant: 20.0).active = true
+                view.topAnchor.constraintEqualToAnchor(topLayoutGuide.bottomAnchor, constant: margin).active = true
             }
         default:
             // Creating constraints using NSLayoutConstraint: from iOS 6.0
@@ -67,7 +72,7 @@ class ATLBaseViewController: UIViewController {
                                attribute: .LeadingMargin, multiplier: 1.0, constant: 0).active = true
             
             NSLayoutConstraint(item: view, attribute: .Top, relatedBy: .Equal, toItem: self.topLayoutGuide,
-                               attribute: .Bottom, multiplier: 1.0, constant: 20.0).active = true
+                               attribute: .Bottom, multiplier: 1.0, constant: margin).active = true
             
         }
     }
@@ -184,7 +189,7 @@ class ATLBaseViewController: UIViewController {
                                attribute: .LeadingMargin, multiplier: 1.0, constant: 0).active = true
             
             NSLayoutConstraint(item: view, attribute: .CenterY, relatedBy: .Equal, toItem: self.view,
-                               attribute: .CenterY, multiplier: 1.0, constant: margin).active = true
+                               attribute: .CenterY, multiplier: 1.0, constant: 0).active = true
         }
     }
     
@@ -225,7 +230,7 @@ class ATLBaseViewController: UIViewController {
                                attribute: .TrailingMargin, multiplier: 1.0, constant: 0).active = true
             
             NSLayoutConstraint(item: view, attribute: .CenterY, relatedBy: .Equal, toItem: self.view,
-                               attribute: .CenterY, multiplier: 1.0, constant: margin).active = true
+                               attribute: .CenterY, multiplier: 1.0, constant: 0).active = true
         }
     }
     
@@ -289,7 +294,7 @@ class ATLBaseViewController: UIViewController {
                                attribute: .CenterX, multiplier: 1.0, constant: 0).active = true
             
             NSLayoutConstraint(item: view, attribute: .CenterY, relatedBy: .Equal, toItem: self.view,
-                               attribute: .CenterY, multiplier: 1.0, constant: margin).active = true
+                               attribute: .CenterY, multiplier: 1.0, constant: 0).active = true
         }
     }
     
@@ -325,7 +330,7 @@ class ATLBaseViewController: UIViewController {
                                attribute: .LeadingMargin, multiplier: 1.0, constant: 0).active = true
             
             NSLayoutConstraint(item: view, attribute: .Top, relatedBy: .Equal, toItem: self.topLayoutGuide,
-                               attribute: .Bottom, multiplier: 1.0, constant: 20.0).active = true
+                               attribute: .Bottom, multiplier: 1.0, constant: margin).active = true
             
             //Fix Height
             NSLayoutConstraint(item: view, attribute: .Height, relatedBy: .Equal, toItem: nil,

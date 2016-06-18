@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		001443761D12D864002A9043 /* AutolayoutExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001443751D12D864002A9043 /* AutolayoutExamplesTests.swift */; };
 		001443841D12D8E3002A9043 /* AutolayoutExamplesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001443831D12D8E3002A9043 /* AutolayoutExamplesUITests.swift */; };
+		0014438E1D13034A002A9043 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00BDB9B41D046AD500B10EC0 /* Main.storyboard */; };
 		00BDB9B71D046AD500B10EC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BDB9AF1D046AD500B10EC0 /* AppDelegate.swift */; };
 		00BDB9B81D046AD500B10EC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BDB9B01D046AD500B10EC0 /* Assets.xcassets */; };
 		00BDB9B91D046AD500B10EC0 /* ATLProgramatical1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BDB9B11D046AD500B10EC0 /* ATLProgramatical1ViewController.swift */; };
@@ -16,6 +17,7 @@
 		00BDB9BB1D046AD500B10EC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00BDB9B41D046AD500B10EC0 /* Main.storyboard */; };
 		00D9117D1D0C5D8800DDA5DC /* ATLProgramatical2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9117C1D0C5D8800DDA5DC /* ATLProgramatical2ViewController.swift */; };
 		00D9117F1D0C5DBC00DDA5DC /* ATLBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9117E1D0C5DBC00DDA5DC /* ATLBaseViewController.swift */; };
+		00DC64CA1D1591B70069D127 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DC64C91D1591B70069D127 /* UIDeviceExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,7 @@
 		00C4ABED1D03EE2B00B4BEAD /* AutolayoutExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutolayoutExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00D9117C1D0C5D8800DDA5DC /* ATLProgramatical2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATLProgramatical2ViewController.swift; sourceTree = "<group>"; };
 		00D9117E1D0C5DBC00DDA5DC /* ATLBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATLBaseViewController.swift; sourceTree = "<group>"; };
+		00DC64C91D1591B70069D127 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 			children = (
 				001443751D12D864002A9043 /* AutolayoutExamplesTests.swift */,
 				001443771D12D864002A9043 /* Info.plist */,
+				00DC64C91D1591B70069D127 /* UIDeviceExtension.swift */,
 			);
 			path = AutolayoutExamplesTests;
 			sourceTree = "<group>";
@@ -235,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0014438E1D13034A002A9043 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				001443761D12D864002A9043 /* AutolayoutExamplesTests.swift in Sources */,
+				00DC64CA1D1591B70069D127 /* UIDeviceExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +331,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = AutolayoutExamplesTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = congpc.ios.AutolayoutExamplesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -338,7 +344,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = AutolayoutExamplesTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = congpc.ios.AutolayoutExamplesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,7 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = AutolayoutExamplesUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = congpc.ios.AutolayoutExamplesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -362,7 +368,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = AutolayoutExamplesUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = congpc.ios.AutolayoutExamplesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -487,6 +493,7 @@
 				0014437B1D12D864002A9043 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		001443881D12D8E3002A9043 /* Build configuration list for PBXNativeTarget "AutolayoutExamplesUITests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +502,7 @@
 				0014438A1D12D8E3002A9043 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		00C4ABE81D03EE2B00B4BEAD /* Build configuration list for PBXProject "AutolayoutExamples" */ = {
 			isa = XCConfigurationList;

@@ -13,9 +13,9 @@ class ATLProgramatical1ViewController: ATLBaseViewController {
         super.viewDidLoad()
         //1
         self.createLeftTopLabel()
-        self.createLeftBottomLabel()
         self.createRightTopLabel()
         self.createRightBottomLabel()
+        self.createLeftBottomLabel()
         
         //2
         self.createLeftCenterYLabel()
