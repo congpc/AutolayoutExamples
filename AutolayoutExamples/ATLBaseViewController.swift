@@ -13,11 +13,16 @@ public class ATLBaseViewController: UIViewController {
     var constaintType: Int8 = 0
     
     var isIOS9: Bool = false
-    let metrics = ["margin":16.0] // Default left margin and right margin = 16 or 20 px
+    var metrics = ["margin":16.0] // Default left margin and right margin = 16px
     var margin:CGFloat = 16.0
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        if Device.IS_5_5_INCHES() == true {
+            //iPhone 5.5 inch: Margin = 20 px
+            metrics = ["margin":20.0]
+            margin = 20.0
+        }
         if #available(iOS 9.0, *) {
             self.isIOS9 = true
         }
@@ -165,6 +170,9 @@ public class ATLBaseViewController: UIViewController {
             }
         default:
             // Creating constraints using NSLayoutConstraint: from iOS 6.0
+//            NSLayoutConstraint(item: self.view, attribute: .LeadingMargin, relatedBy: .Equal, toItem: view,
+//                               attribute: .Leading, multiplier: 1.0, constant: 0).active = true
+            
             NSLayoutConstraint(item: view, attribute: .Leading, relatedBy: .Equal, toItem: self.view,
                                attribute: .LeadingMargin, multiplier: 1.0, constant: 0).active = true
             
