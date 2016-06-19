@@ -88,7 +88,7 @@ class AutolayoutExamplesTests: XCTestCase {
                 return CGRectMake(16, 36, 61.5, 20)
             }
         }
-        else {
+        else if Device.IS_4_INCHES() == true {
             //iPhone 4 inch
             switch tag {
             case 102:
@@ -102,7 +102,6 @@ class AutolayoutExamplesTests: XCTestCase {
                 return CGRectMake(16, 532, 90.5, 20)
             case 105:
                 //Left CenterY
-                //16 339.5; 96 20
                 return CGRectMake(16, 274, 96, 20)
             case 106:
                 //CenterX Top
@@ -116,6 +115,38 @@ class AutolayoutExamplesTests: XCTestCase {
             case 109:
                 //Center
                 return CGRectMake(134.5, 274, 51.5, 20)
+            default:
+                //Left top
+                return CGRectMake(16, 36, 61.5, 20)
+            }
+        }
+        else {
+            //iPhone 3.5 inch
+            switch tag {
+            case 102:
+                //Right top
+                return CGRectMake(231.5, 36, 72.5, 20)
+            case 103:
+                //Right bottom
+                return CGRectMake(202.5, 444.0, 101.5, 20.0)
+            case 104:
+                //Left bottom
+                return CGRectMake(16.0, 444.0, 90.5, 20.0)
+            case 105:
+                //Left CenterY
+                return CGRectMake(16.0, 230.0, 96.0, 20.0)
+            case 106:
+                //CenterX Top
+                return CGRectMake(113, 36, 94, 20)
+            case 107:
+                //Right CenterY
+                return CGRectMake(197.0, 230.0, 107.0, 20.0)
+            case 108:
+                //CenterX Bottom
+                return CGRectMake(99.0, 444.0, 122.5, 20.0)
+            case 109:
+                //Center
+                return CGRectMake(134.5, 230.0, 51.5, 20.0)
             default:
                 //Left top
                 return CGRectMake(16, 36, 61.5, 20)
