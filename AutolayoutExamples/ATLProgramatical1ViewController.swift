@@ -33,7 +33,17 @@ class ATLProgramatical1ViewController: ATLBaseViewController {
     //MARK: - Corner pins
     func createLeftTopLabel() {
         //Create label
-        let label = self.createLabel("Left Top", 101, UIColor.greenColor())
+        var label:UILabel!
+        if constaintType == 0 {
+            label = self.createLabel("Left Top", 101, UIColor.greenColor())
+        }
+        else if constaintType == 1 {
+            label = self.createLabel("Left Top", 101, UIColor.brownColor())
+        }
+        else {
+            label = self.createLabel("Left Top", 101, UIColor.orangeColor())
+        }
+        
         self.view.addSubview(label)
         
         //Config constraints
@@ -42,7 +52,16 @@ class ATLProgramatical1ViewController: ATLBaseViewController {
     
     func createRightTopLabel() {
         //Create label
-        let label = self.createLabel("Right Top", 102, UIColor.greenColor())
+        let label:UILabel!
+        if constaintType == 0 {
+            label = self.createLabel("Right Top", 102, UIColor.greenColor())
+        }
+        else if constaintType == 1 {
+            label = self.createLabel("Right Top", 102, UIColor.brownColor())
+        }
+        else {
+            label = self.createLabel("Right Top", 102, UIColor.orangeColor())
+        }
         self.view.addSubview(label)
         
         //Config constraints
@@ -51,7 +70,16 @@ class ATLProgramatical1ViewController: ATLBaseViewController {
     
     func createRightBottomLabel() {
         //Create label
-        let label = self.createLabel("Right Bottom", 103, UIColor.greenColor())
+        let label:UILabel!
+        if constaintType == 0 {
+            label = self.createLabel("Right Bottom", 103, UIColor.greenColor())
+        }
+        else if constaintType == 1 {
+            label = self.createLabel("Right Bottom", 103, UIColor.brownColor())
+        }
+        else {
+            label = self.createLabel("Right Bottom", 103, UIColor.orangeColor())
+        }
         self.view.addSubview(label)
         
         //Config constraints
@@ -60,7 +88,16 @@ class ATLProgramatical1ViewController: ATLBaseViewController {
     
     func createLeftBottomLabel() {
         //Create label
-        let label = self.createLabel("Left Bottom", 104, UIColor.greenColor())
+        let label:UILabel!
+        if constaintType == 0 {
+            label = self.createLabel("Left Bottom", 104, UIColor.greenColor())
+        }
+        else if constaintType == 1 {
+            label = self.createLabel("Left Bottom", 104, UIColor.brownColor())
+        }
+        else {
+            label = self.createLabel("Left Bottom", 104, UIColor.orangeColor())
+        }
         self.view.addSubview(label)
         
         //Config constraints

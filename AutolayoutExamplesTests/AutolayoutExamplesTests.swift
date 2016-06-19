@@ -189,10 +189,36 @@ class AutolayoutExamplesTests: XCTestCase {
     }
     
     func testAutolayout_Pin_VisualFormatLanguage() {
-        
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("pinViewController3")
+        UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
+        viewController.view.layoutIfNeeded()
+        for i in minPinLabelTag...maxPinLabelTag {
+            let subView = viewController.view.viewWithTag(i)
+            
+            let rect1 = (subView?.frame)!
+            let rect2 = self.createPinLabelRect((subView?.tag)!)
+            let result = CGRectEqualToRect(rect1, rect2)
+            if result == false {
+                print("\(rect1) - \(rect2)")
+            }
+            XCTAssertTrue(result, "Label with tag \(i) is wrong position")
+        }
     }
     
     func testAutolayout_Pin_LayoutAnchor() {
-        
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("pinViewController4")
+        UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
+        viewController.view.layoutIfNeeded()
+        for i in minPinLabelTag...maxPinLabelTag {
+            let subView = viewController.view.viewWithTag(i)
+            
+            let rect1 = (subView?.frame)!
+            let rect2 = self.createPinLabelRect((subView?.tag)!)
+            let result = CGRectEqualToRect(rect1, rect2)
+            if result == false {
+                print("\(rect1) - \(rect2)")
+            }
+            XCTAssertTrue(result, "Label with tag \(i) is wrong position")
+        }
     }
 }

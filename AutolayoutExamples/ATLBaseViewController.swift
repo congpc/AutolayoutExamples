@@ -10,7 +10,7 @@ import UIKit
 
 public class ATLBaseViewController: UIViewController {
     //0: Using NSLayoutConstraint, 1: Using VisualFormatLanguage, 2: Using NSLayoutAnchor (iOS 9)
-    var constaintType: Int8 = 0
+    @IBInspectable var constaintType: Int8 = 0
     
     var isIOS9: Bool = false
     var metrics = ["margin":16.0] // Default left margin and right margin = 16px
@@ -206,11 +206,11 @@ public class ATLBaseViewController: UIViewController {
         case 2 where self.isIOS9 == true:
             if #available(iOS 9.0, *) {
                 // Creating the same constraints using Layout Anchors: from iOS 9.0
-                let margins = self.view.layoutMarginsGuide
-                view.centerXAnchor.constraintEqualToAnchor(margins.centerXAnchor).active = true
-                
                 let topLayoutGuide = self.topLayoutGuide
-                view.topAnchor.constraintEqualToAnchor(topLayoutGuide.bottomAnchor, constant: margins.layoutFrame.size.width).active = true
+                let margins = self.view.layoutMarginsGuide
+                
+                view.topAnchor.constraintEqualToAnchor(topLayoutGuide.bottomAnchor, constant: margin).active = true
+                margins.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor).active = true
             }
         default:
             // Creating constraints using NSLayoutConstraint: from iOS 6.0

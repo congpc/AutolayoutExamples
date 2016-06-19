@@ -62,7 +62,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Using Programmatically" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aQg-mZ-Dt5">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Using NSLayoutConstraint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aQg-mZ-Dt5">
                                                     <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -73,6 +73,46 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="QXI-oi-WtN" kind="show" id="CIy-cT-77N"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="autolayoutCell" textLabel="3xs-oU-hsj" style="IBUITableViewCellStyleDefault" id="LqJ-03-1RC">
+                                        <rect key="frame" x="0.0" y="157.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LqJ-03-1RC" id="P3X-q7-lYd">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Using VisualFormatLanguage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3xs-oU-hsj">
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="G61-nM-RZZ" kind="show" id="Rgl-ef-sE8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="autolayoutCell" textLabel="a3R-PM-Kwh" style="IBUITableViewCellStyleDefault" id="EA2-hZ-IVg">
+                                        <rect key="frame" x="0.0" y="157.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EA2-hZ-IVg" id="dO2-uM-QlV">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Using NSLayoutAnchor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a3R-PM-Kwh">
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="DNR-Xq-LxD" kind="show" id="emD-wI-t4U"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -281,7 +321,7 @@
             </objects>
             <point key="canvasLocation" x="1752" y="999"/>
         </scene>
-        <!--Programmatically-->
+        <!--NSLayoutConstraint-->
         <scene sceneID="POE-Au-LGw">
             <objects>
                 <viewController storyboardIdentifier="pinViewController2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QXI-oi-WtN" customClass="ATLProgramatical1ViewController" customModule="AutolayoutExamples" sceneMemberID="viewController">
@@ -294,7 +334,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Programmatically" id="4W5-8L-FcQ"/>
+                    <navigationItem key="navigationItem" title="NSLayoutConstraint" id="4W5-8L-FcQ"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="constaintType">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rAQ-Ze-n4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -411,6 +456,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgp-qY-QCv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1730" y="3326"/>
+        </scene>
+        <!--Visual Format Language-->
+        <scene sceneID="ZA2-tp-nu1">
+            <objects>
+                <viewController storyboardIdentifier="pinViewController3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="G61-nM-RZZ" customClass="ATLProgramatical1ViewController" customModule="AutolayoutExamples" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="saA-wI-eqd"/>
+                        <viewControllerLayoutGuide type="bottom" id="fFJ-x6-bmO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QiZ-9i-w3r">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Visual Format Language" id="n0g-Vh-e62"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="constaintType">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jaX-H6-nBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2481" y="1803.75"/>
+        </scene>
+        <!--NSLayoutAnchor-->
+        <scene sceneID="uav-0e-uks">
+            <objects>
+                <viewController storyboardIdentifier="pinViewController4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DNR-Xq-LxD" customClass="ATLProgramatical1ViewController" customModule="AutolayoutExamples" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dOk-xt-OkB"/>
+                        <viewControllerLayoutGuide type="bottom" id="odR-E2-hUT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nrb-1Z-ovP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="NSLayoutAnchor" id="rZC-dc-2Tf"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="constaintType">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tdh-gm-Wae" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3192" y="1803.75"/>
         </scene>
     </scenes>
 </document>
