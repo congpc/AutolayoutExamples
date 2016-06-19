@@ -168,28 +168,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="108" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CenterX Bottom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lun-9u-S1M">
-                                <rect key="frame" x="239" y="564" width="122.5" height="20"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right Bottom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4J-RC-RhB">
-                                <rect key="frame" x="479" y="564" width="101" height="20"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="106" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CenterX Top" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hx2-im-p62">
+                            <label opaque="NO" userInteractionEnabled="NO" tag="106" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="CenterX Top" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hx2-im-p62">
                                 <rect key="frame" x="253" y="80" width="94" height="20"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right Top" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plL-bX-nhL">
+                            <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Right Top" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plL-bX-nhL">
                                 <rect key="frame" x="507.5" y="80" width="72.5" height="20"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -203,7 +189,21 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Left Top" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXF-pG-WnW">
+                            <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right Bottom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4J-RC-RhB">
+                                <rect key="frame" x="479" y="564" width="101" height="20"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="108" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CenterX Bottom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lun-9u-S1M">
+                                <rect key="frame" x="239" y="564" width="122.5" height="20"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Left Top" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXF-pG-WnW">
                                 <rect key="frame" x="20" y="80" width="61.5" height="20"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -214,24 +214,66 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gxG-UY-IdH" firstAttribute="centerY" secondItem="GeS-RE-V81" secondAttribute="centerY" id="1BV-N1-fSe"/>
-                            <constraint firstItem="ot1-9R-ys4" firstAttribute="top" secondItem="J4J-RC-RhB" secondAttribute="bottom" constant="16" id="8Xx-Pa-CZN"/>
+                            <constraint firstItem="plL-bX-nhL" firstAttribute="top" secondItem="DbR-pe-xfK" secondAttribute="bottom" priority="750" constant="16" id="4bq-kr-g8m"/>
+                            <constraint firstItem="ot1-9R-ys4" firstAttribute="top" secondItem="rGR-Gx-4hQ" secondAttribute="bottom" constant="20" id="8qb-XS-5XN"/>
+                            <constraint firstItem="gXF-pG-WnW" firstAttribute="top" secondItem="DbR-pe-xfK" secondAttribute="bottom" constant="20" id="92a-LN-Uf0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="J4J-RC-RhB" secondAttribute="trailing" id="FO9-XA-wHa"/>
                             <constraint firstItem="bFQ-a2-CmX" firstAttribute="centerY" secondItem="GeS-RE-V81" secondAttribute="centerY" id="JLy-a0-tby"/>
                             <constraint firstItem="zPg-ao-67p" firstAttribute="centerY" secondItem="GeS-RE-V81" secondAttribute="centerY" id="KBS-2w-QUN"/>
                             <constraint firstItem="lun-9u-S1M" firstAttribute="centerX" secondItem="GeS-RE-V81" secondAttribute="centerX" id="MIa-TL-EsG"/>
                             <constraint firstItem="gXF-pG-WnW" firstAttribute="leading" secondItem="GeS-RE-V81" secondAttribute="leadingMargin" id="N1v-Fc-fHs"/>
-                            <constraint firstItem="gXF-pG-WnW" firstAttribute="top" secondItem="DbR-pe-xfK" secondAttribute="bottom" constant="16" id="NxD-n0-yLw"/>
                             <constraint firstItem="plL-bX-nhL" firstAttribute="trailing" secondItem="GeS-RE-V81" secondAttribute="trailingMargin" id="SAF-AD-tQa"/>
-                            <constraint firstItem="ot1-9R-ys4" firstAttribute="top" secondItem="rGR-Gx-4hQ" secondAttribute="bottom" constant="16" id="Vk6-GC-IPb"/>
                             <constraint firstItem="Hx2-im-p62" firstAttribute="centerX" secondItem="GeS-RE-V81" secondAttribute="centerX" id="WG9-Tt-jHX"/>
+                            <constraint firstItem="Hx2-im-p62" firstAttribute="top" secondItem="DbR-pe-xfK" secondAttribute="bottom" constant="20" id="XnB-5a-hu1"/>
+                            <constraint firstItem="Hx2-im-p62" firstAttribute="top" secondItem="DbR-pe-xfK" secondAttribute="bottom" priority="750" constant="16" id="ZXh-Cn-mC2"/>
                             <constraint firstItem="bFQ-a2-CmX" firstAttribute="centerX" secondItem="GeS-RE-V81" secondAttribute="centerX" id="aYo-dZ-oqp"/>
                             <constraint firstItem="zPg-ao-67p" firstAttribute="leading" secondItem="GeS-RE-V81" secondAttribute="leadingMargin" id="biS-EB-9nE"/>
                             <constraint firstItem="gxG-UY-IdH" firstAttribute="trailing" secondItem="GeS-RE-V81" secondAttribute="trailingMargin" id="ccY-7s-fri"/>
-                            <constraint firstItem="ot1-9R-ys4" firstAttribute="top" secondItem="lun-9u-S1M" secondAttribute="bottom" constant="16" id="e1N-EL-obX"/>
-                            <constraint firstItem="plL-bX-nhL" firstAttribute="top" secondItem="DbR-pe-xfK" secondAttribute="bottom" constant="16" id="eEF-6N-AXV"/>
-                            <constraint firstItem="Hx2-im-p62" firstAttribute="top" secondItem="DbR-pe-xfK" secondAttribute="bottom" constant="16" id="em8-Q7-e4X"/>
+                            <constraint firstItem="gXF-pG-WnW" firstAttribute="top" secondItem="DbR-pe-xfK" secondAttribute="bottom" priority="750" constant="16" id="ddY-uH-CMw"/>
+                            <constraint firstItem="ot1-9R-ys4" firstAttribute="top" secondItem="J4J-RC-RhB" secondAttribute="bottom" priority="750" constant="16" id="g6x-q0-KHO"/>
+                            <constraint firstItem="ot1-9R-ys4" firstAttribute="top" secondItem="J4J-RC-RhB" secondAttribute="bottom" constant="20" id="gcH-w3-ZFE"/>
+                            <constraint firstItem="ot1-9R-ys4" firstAttribute="top" secondItem="lun-9u-S1M" secondAttribute="bottom" constant="20" id="ll9-2F-sTA"/>
+                            <constraint firstItem="ot1-9R-ys4" firstAttribute="top" secondItem="lun-9u-S1M" secondAttribute="bottom" priority="750" constant="16" id="ng1-5W-aCK"/>
+                            <constraint firstItem="ot1-9R-ys4" firstAttribute="top" secondItem="rGR-Gx-4hQ" secondAttribute="bottom" priority="750" constant="16" id="qma-nb-K9I"/>
                             <constraint firstItem="rGR-Gx-4hQ" firstAttribute="leading" secondItem="GeS-RE-V81" secondAttribute="leadingMargin" id="uvI-EQ-8aN"/>
+                            <constraint firstItem="plL-bX-nhL" firstAttribute="top" secondItem="DbR-pe-xfK" secondAttribute="bottom" constant="20" id="z19-XM-niB"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="92a-LN-Uf0"/>
+                                <exclude reference="ddY-uH-CMw"/>
+                                <exclude reference="XnB-5a-hu1"/>
+                                <exclude reference="ZXh-Cn-mC2"/>
+                                <exclude reference="4bq-kr-g8m"/>
+                                <exclude reference="z19-XM-niB"/>
+                                <exclude reference="8qb-XS-5XN"/>
+                                <exclude reference="g6x-q0-KHO"/>
+                                <exclude reference="gcH-w3-ZFE"/>
+                                <exclude reference="ll9-2F-sTA"/>
+                                <exclude reference="ng1-5W-aCK"/>
+                                <exclude reference="qma-nb-K9I"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="ddY-uH-CMw"/>
+                                <include reference="ZXh-Cn-mC2"/>
+                                <include reference="4bq-kr-g8m"/>
+                                <include reference="g6x-q0-KHO"/>
+                                <include reference="ng1-5W-aCK"/>
+                                <include reference="qma-nb-K9I"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="92a-LN-Uf0"/>
+                                <include reference="XnB-5a-hu1"/>
+                                <include reference="z19-XM-niB"/>
+                                <include reference="8qb-XS-5XN"/>
+                                <include reference="gcH-w3-ZFE"/>
+                                <include reference="ll9-2F-sTA"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Storyboard or Xib" id="h5w-yw-nhd"/>
                 </viewController>
