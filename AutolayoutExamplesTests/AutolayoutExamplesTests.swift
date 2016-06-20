@@ -226,28 +226,43 @@ class AutolayoutExamplesTests: XCTestCase {
             switch tag {
             case 102:
                 //2:Top Edges
-                return CGRectMake(126.33333333333331, 40, 94.666666666666671, 20)
+                return CGRectMake(126.33333333333331, 36.0, 94.666666666666671, 20.0)
             case 103:
                 //3:Leading + Trailing Edges
-                return CGRectMake(20, 130, 201, 20)
+                return CGRectMake(20.0, 126.0, 201.0, 20.0)
             case 104:
                 //4:Bottom Edges
-                return CGRectMake(270.66666666666674, 70, 123.33333333333331, 20)
+                return CGRectMake(270.66666666666674, 66.0, 123.33333333333331, 20.0)
             case 105:
                 //5:CenterX
-                return CGRectMake(136, 190, 75.666666666666657, 50.0)
+                return CGRectMake(136.0, 186.0, 75.666666666666657, 50.0)
             case 106:
                 //6:CenterY
-                return CGRectMake(10.0, 205, 76.333333333333329, 20)
+                return CGRectMake(20.0, 201.0, 76.333333333333329, 20.0)
             case 107:
                 //7:Baseline
-                return CGRectMake(315, 220, 79, 20)
+                return CGRectMake(325.0, 216.0, 79.0, 20.0)
             default:
                 //1:Left top
-                return CGRectMake(20.0, 40.0, 75.666666666666671, 50.0)
+                return CGRectMake(20.0, 36.0, 75.666666666666671, 50.0)
             }
         }
         else if Device.IS_4_7_INCHES() == true {
+            //iPhone 4.7 inch
+            /*(16.0, 40.0, 75.0, 50.0) - (16.0, 36.0, 76.0, 50.0)
+             /Users/congpc/github/AutolayoutExamples/AutolayoutExamplesTests/AutolayoutExamplesTests.swift:412: error: -[AutolayoutExamplesTests.AutolayoutExamplesTests testAutolayout_Alignment_Storyboard] : XCTAssertTrue failed - Label with tag 101 is wrong position
+             (123.0, 40.0, 95.5, 20.5) - (122.5, 36.0, 94.5, 20.0)
+             /Users/congpc/github/AutolayoutExamples/AutolayoutExamplesTests/AutolayoutExamplesTests.swift:412: error: -[AutolayoutExamplesTests.AutolayoutExamplesTests testAutolayout_Alignment_Storyboard] : XCTAssertTrue failed - Label with tag 102 is wrong position
+             (16.0, 130.0, 202.5, 20.5) - (16.0, 126.0, 201.0, 20.0)
+             /Users/congpc/github/AutolayoutExamples/AutolayoutExamplesTests/AutolayoutExamplesTests.swift:412: error: -[AutolayoutExamplesTests.AutolayoutExamplesTests testAutolayout_Alignment_Storyboard] : XCTAssertTrue failed - Label with tag 103 is wrong position
+             (235.5, 69.5, 123.5, 20.5) - (235.5, 66.0, 123.5, 20.0)
+             /Users/congpc/github/AutolayoutExamples/AutolayoutExamplesTests/AutolayoutExamplesTests.swift:412: error: -[AutolayoutExamplesTests.AutolayoutExamplesTests testAutolayout_Alignment_Storyboard] : XCTAssertTrue failed - Label with tag 104 is wrong position
+             (132.0, 190.5, 77.5, 50.0) - (132.0, 186.0, 76.0, 50.0)
+             /Users/congpc/github/AutolayoutExamples/AutolayoutExamplesTests/AutolayoutExamplesTests.swift:412: error: -[AutolayoutExamplesTests.AutolayoutExamplesTests testAutolayout_Alignment_Storyboard] : XCTAssertTrue failed - Label with tag 105 is wrong position
+             (16.0, 205.5, 77.5, 20.5) - (6.0, 201.0, 76.5, 20.0)
+             /Users/congpc/github/AutolayoutExamples/AutolayoutExamplesTests/AutolayoutExamplesTests.swift:412: error: -[AutolayoutExamplesTests.AutolayoutExamplesTests testAutolayout_Alignment_Storyboard] : XCTAssertTrue failed - Label with tag 106 is wrong position
+             (291.0, 220.0, 78.0, 20.5) - (280.0, 216.0, 79.0, 20.0)
+             /Users/congpc/github/AutolayoutExamples/AutolayoutExamplesTests/AutolayoutExamplesTests.swift:412: error: -[AutolayoutExamplesTests.AutolayoutExamplesTests testAutolayout_Alignment_Storyboard] : XCTAssertTrue failed - Label with tag 107 is wrong position*/
             switch tag {
             case 102:
                 //2:Top Edges
@@ -269,7 +284,7 @@ class AutolayoutExamplesTests: XCTestCase {
                 return CGRectMake(280, 216, 79, 20)
             default:
                 //1:Left top
-                return CGRectMake(16, 36, 76, 50.0)
+                return CGRectMake(16.0, 40.0, 75.0, 50.0)
             }
         }
         else if Device.IS_4_INCHES() == true {
@@ -396,37 +411,71 @@ class AutolayoutExamplesTests: XCTestCase {
     }
     
     //MARK: - AlignmentViewControllers
-//    func testAutolayout_Alignment_Storyboard() {
-//        let viewController = storyboard.instantiateViewControllerWithIdentifier("alignmentViewController1")
-//        UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
-//        viewController.view.layoutIfNeeded()
-//        for i in minAlignmentLabelTag...maxAlignmentLabelTag {
-//            let subView = viewController.view.viewWithTag(i)
-//            
-//            let rect1 = (subView?.frame)!
-//            let rect2 = self.createAlignmentLabelRect((subView?.tag)!)
-//            let result = CGRectEqualToRect(rect1, rect2)
-//            if result == false {
-//                print("\(rect1) - \(rect2)")
-//            }
-//            XCTAssertTrue(result, "Label with tag \(i) is wrong position")
-//        }
-//    }
-//    
-//    func testAutolayout_Alignment_LayoutConstraint() {
-//        let viewController = storyboard.instantiateViewControllerWithIdentifier("alignmentViewController2")
-//        UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
-//        viewController.view.layoutIfNeeded()
-//        for i in minAlignmentLabelTag...maxAlignmentLabelTag {
-//            let subView = viewController.view.viewWithTag(i)
-//            
-//            let rect1 = (subView?.frame)!
-//            let rect2 = self.createAlignmentLabelRect((subView?.tag)!)
-//            let result = CGRectEqualToRect(rect1, rect2)
-//            if result == false {
-//                print("\(rect1) - \(rect2)")
-//            }
-//            XCTAssertTrue(result, "Label with tag \(i) is wrong position")
-//        }
-//    }
+    func testAutolayout_Alignment_Storyboard() {
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("alignmentViewController1")
+        UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
+        viewController.view.layoutIfNeeded()
+        for i in minAlignmentLabelTag...maxAlignmentLabelTag {
+            let subView = viewController.view.viewWithTag(i)
+            
+            let rect1 = (subView?.frame)!
+            let rect2 = self.createAlignmentLabelRect((subView?.tag)!)
+            let result = CGRectEqualToRect(rect1, rect2)
+            if result == false {
+                print("\(rect1) - \(rect2)")
+            }
+            XCTAssertTrue(result, "Label with tag \(i) is wrong position")
+        }
+    }
+    
+    func testAutolayout_Alignment_LayoutConstraint() {
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("alignmentViewController2")
+        UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
+        viewController.view.layoutIfNeeded()
+        for i in minAlignmentLabelTag...maxAlignmentLabelTag {
+            let subView = viewController.view.viewWithTag(i)
+            
+            let rect1 = (subView?.frame)!
+            let rect2 = self.createAlignmentLabelRect((subView?.tag)!)
+            let result = CGRectEqualToRect(rect1, rect2)
+            if result == false {
+                print("\(rect1) - \(rect2)")
+            }
+            XCTAssertTrue(result, "Label with tag \(i) is wrong position")
+        }
+    }
+    
+    func testAutolayout_Alignment_VisualFormatLanguage() {
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("alignmentViewController3")
+        UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
+        viewController.view.layoutIfNeeded()
+        for i in minAlignmentLabelTag...maxAlignmentLabelTag {
+            let subView = viewController.view.viewWithTag(i)
+            
+            let rect1 = (subView?.frame)!
+            let rect2 = self.createAlignmentLabelRect((subView?.tag)!)
+            let result = CGRectEqualToRect(rect1, rect2)
+            if result == false {
+                print("\(rect1) - \(rect2)")
+            }
+            XCTAssertTrue(result, "Label with tag \(i) is wrong position")
+        }
+    }
+    
+    func testAutolayout_Alignment_LayoutAnchor() {
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("alignmentViewController4")
+        UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
+        viewController.view.layoutIfNeeded()
+        for i in minAlignmentLabelTag...maxAlignmentLabelTag {
+            let subView = viewController.view.viewWithTag(i)
+            
+            let rect1 = (subView?.frame)!
+            let rect2 = self.createAlignmentLabelRect((subView?.tag)!)
+            let result = CGRectEqualToRect(rect1, rect2)
+            if result == false {
+                print("\(rect1) - \(rect2)")
+            }
+            XCTAssertTrue(result, "Label with tag \(i) is wrong position")
+        }
+    }
 }

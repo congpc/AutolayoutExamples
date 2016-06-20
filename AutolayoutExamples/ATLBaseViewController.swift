@@ -311,6 +311,7 @@ public class ATLBaseViewController: UIViewController {
     }
     
     //MARK: - ViewController 2
+    //self.config1LeftTopConstraints(leftTopLabel,50)
     func config1LeftTopConstraints(view:AnyObject,_ equalHeight:CGFloat) {
         switch constaintType {
         case 1:
@@ -320,7 +321,7 @@ public class ATLBaseViewController: UIViewController {
             let constraint1 = NSLayoutConstraint.constraintsWithVisualFormat("H:|-margin-[view]",
                                                                              options: [], metrics: metrics, views: views)
             allConstraints += constraint1
-            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[topLayoutGuide]-margin-[view(\(equalHeight))]",
+            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[topLayoutGuide]-(\(margin))-[view(\(equalHeight))]",
                                                                              options: [], metrics: metrics, views: views)
             allConstraints += constraint2
             NSLayoutConstraint.activateConstraints(allConstraints)
@@ -350,6 +351,7 @@ public class ATLBaseViewController: UIViewController {
         }
     }
     
+    //self.config2TopEdgesAndLessThanConstraints(leftTopLabel, topEdgesLabel, 30)
     func config2TopEdgesAndLessThanConstraints(firstView:AnyObject, _ secondView:AnyObject, _ lessWidth:CGFloat) {
         switch constaintType {
         case 1:
@@ -381,13 +383,16 @@ public class ATLBaseViewController: UIViewController {
         }
     }
     
+    //self.config3LeadingAndTrailingConstraints(leftTopLabel, leadingAndTrailingLabel, topEdgesLabel, 40)
     func config3LeadingAndTrailingConstraints(firstView:AnyObject, _ secondView:AnyObject, _ thirdView:AnyObject, _ equalHeight:CGFloat) {
         switch constaintType {
         case 1:
             // Creating constraints using Visual Format Language: from iOS 6.0
-            let views : [String : AnyObject] = ["firstView": firstView,"secondView": secondView,"thirdView": thirdView]
+            let centerYLabel = self.view.viewWithTag(106)!
+            let views : [String : AnyObject] = ["firstView": firstView,"secondView": secondView,"thirdView": thirdView,"centerYLabel":centerYLabel]
+            
             var allConstraints = [NSLayoutConstraint]()
-            let constraint1 = NSLayoutConstraint.constraintsWithVisualFormat("V:[firstView]-(\(equalHeight))-[secondView]",
+            let constraint1 = NSLayoutConstraint.constraintsWithVisualFormat("V:[firstView]-(\(equalHeight))-[secondView]-(>=0)-[centerYLabel]",
                                                                              options: NSLayoutFormatOptions.AlignAllLeading, metrics: nil, views: views)
             allConstraints += constraint1
 
@@ -417,6 +422,7 @@ public class ATLBaseViewController: UIViewController {
         }
     }
     
+    //self.config4BottomEdgesConstraints(leftTopLabel, bottomEdgesLabel)
     func config4BottomEdgesConstraints(firstView:AnyObject, _ secondView:AnyObject) {
         switch constaintType {
         case 1:
@@ -446,6 +452,7 @@ public class ATLBaseViewController: UIViewController {
         }
     }
     
+    //self.config5CenterXConstraints(centerXLabel, 50, 130, topEdgesLabel)
     func config5CenterXConstraints(firstView:AnyObject, _ equalHeight:CGFloat, _ padding:CGFloat, _ secondView:AnyObject) {
         switch constaintType {
         case 1:
@@ -476,6 +483,7 @@ public class ATLBaseViewController: UIViewController {
         }
     }
     
+    //self.config6CenterYConstraints(centerYLabel, centerXLabel, leadingAndTrailingLabel)
     func config6CenterYConstraints(firstView:AnyObject, _ secondView:AnyObject, _ thirdView:AnyObject) {
         switch constaintType {
         case 1:
@@ -485,25 +493,26 @@ public class ATLBaseViewController: UIViewController {
             let constraint1 = NSLayoutConstraint.constraintsWithVisualFormat("H:[firstView]-(>=10)-[secondView]",
                                                                              options: NSLayoutFormatOptions.AlignAllCenterY, metrics: nil, views: views)
             allConstraints += constraint1
-            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[thirdView]-(>=10)-[firstView]",
-                                                                             options: NSLayoutFormatOptions.AlignAllLeading, metrics: nil, views: views)
-            allConstraints += constraint2
+//            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[thirdView]-(>=10)-[firstView]",
+//                                                                             options: NSLayoutFormatOptions.AlignAllLeading, metrics: nil, views: views)
+//            allConstraints += constraint2
             NSLayoutConstraint.activateConstraints(allConstraints)
         case 2 where self.isIOS9 == true:
             if #available(iOS 9.0, *) {
                 // Creating the same constraints using Layout Anchors: from iOS 9.0
                 firstView.centerYAnchor.constraintEqualToAnchor(secondView.centerYAnchor).active = true
-                thirdView.leadingAnchor.constraintEqualToAnchor(firstView.leadingAnchor, constant: 10).active = true
+                thirdView.leadingAnchor.constraintEqualToAnchor(firstView.leadingAnchor, constant: 0).active = true
             }
         default:
             // Creating constraints using NSLayoutConstraint: from iOS 6.0
             NSLayoutConstraint(item: firstView, attribute: .CenterY, relatedBy: .Equal, toItem: secondView,
                                attribute: .CenterY, multiplier: 1.0, constant: 0).active = true
             NSLayoutConstraint(item: thirdView, attribute: .Leading, relatedBy: .Equal, toItem: firstView,
-                               attribute: .Leading, multiplier: 1.0, constant: 10).active = true
+                               attribute: .Leading, multiplier: 1.0, constant: 0).active = true
         }
     }
     
+    //self.config7BaselineConstraints(centerXLabel, baselineLabel, bottomEdgesLabel)
     func config7BaselineConstraints(firstView:AnyObject, _ secondView:AnyObject, _ thirdView:AnyObject) {
         switch constaintType {
         case 1:
@@ -521,14 +530,14 @@ public class ATLBaseViewController: UIViewController {
             if #available(iOS 9.0, *) {
                 // Creating the same constraints using Layout Anchors: from iOS 9.0
                 firstView.lastBaselineAnchor.constraintEqualToAnchor(secondView.lastBaselineAnchor).active = true
-                secondView.trailingAnchor.constraintEqualToAnchor(thirdView.trailingAnchor).active = true
+                secondView.trailingAnchor.constraintEqualToAnchor(thirdView.trailingAnchor,constant: 10.0).active = true
             }
         default:
             // Creating constraints using NSLayoutConstraint: from iOS 6.0
             NSLayoutConstraint(item: firstView, attribute: .Baseline, relatedBy: .Equal, toItem: secondView,
                                attribute: .Baseline, multiplier: 1.0, constant: 0).active = true
             NSLayoutConstraint(item: secondView, attribute: .Trailing, relatedBy: .Equal, toItem: thirdView,
-                               attribute: .Trailing, multiplier: 1.0, constant: 0).active = true
+                               attribute: .Trailing, multiplier: 1.0, constant: 10).active = true
         }
     }
 }
