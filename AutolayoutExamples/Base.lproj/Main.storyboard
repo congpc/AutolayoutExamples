@@ -160,7 +160,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="autolayoutCell" textLabel="Uzm-4s-IGO" style="IBUITableViewCellStyleDefault" id="tjN-3Z-TKv">
-                                        <rect key="frame" x="0.0" y="383.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="427.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tjN-3Z-TKv" id="m6b-Ji-Ihd">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -180,7 +180,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="autolayoutCell" textLabel="NPL-Z9-rgT" style="IBUITableViewCellStyleDefault" id="UzJ-qa-90K">
-                                        <rect key="frame" x="0.0" y="383.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="471.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UzJ-qa-90K" id="uO0-bu-NK0">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -234,12 +234,15 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Left Bottom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGR-Gx-4hQ">
-                                <rect key="frame" x="20" y="564" width="91" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Left Bottom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGR-Gx-4hQ">
+                                <rect key="frame" x="20" y="560" width="91" height="20"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="760" width="91" height="20"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="109" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Center" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFQ-a2-CmX">
                                 <rect key="frame" x="274" y="290.5" width="52" height="20"/>
@@ -248,19 +251,25 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="106" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="CenterX Top" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hx2-im-p62">
-                                <rect key="frame" x="253" y="80" width="94" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="106" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CenterX Top" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hx2-im-p62">
+                                <rect key="frame" x="253" y="84" width="94" height="20"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="153" y="84" width="94" height="20"/>
+                                </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Right Top" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plL-bX-nhL">
-                                <rect key="frame" x="507.5" y="80" width="72.5" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right Top" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plL-bX-nhL">
+                                <rect key="frame" x="507.5" y="84" width="72.5" height="20"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="307" y="84" width="72.5" height="20"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="107" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right CenterY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxG-UY-IdH">
                                 <rect key="frame" x="473" y="290.5" width="107" height="20"/>
@@ -269,26 +278,32 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Right Bottom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4J-RC-RhB">
-                                <rect key="frame" x="479" y="564" width="101" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="108" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CenterX Bottom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lun-9u-S1M">
+                                <rect key="frame" x="239" y="560" width="122.5" height="20"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="139" y="760" width="122.5" height="20"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Left Top" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXF-pG-WnW">
+                                <rect key="frame" x="20" y="84" width="61.5" height="20"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="108" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="CenterX Bottom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lun-9u-S1M">
-                                <rect key="frame" x="239" y="564" width="122.5" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right Bottom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4J-RC-RhB">
+                                <rect key="frame" x="479" y="560" width="101" height="20"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Left Top" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXF-pG-WnW">
-                                <rect key="frame" x="20" y="80" width="61.5" height="20"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="279" y="760" width="101" height="20"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -320,38 +335,44 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="92a-LN-Uf0"/>
                                 <exclude reference="ddY-uH-CMw"/>
-                                <exclude reference="XnB-5a-hu1"/>
                                 <exclude reference="ZXh-Cn-mC2"/>
                                 <exclude reference="4bq-kr-g8m"/>
-                                <exclude reference="z19-XM-niB"/>
-                                <exclude reference="8qb-XS-5XN"/>
                                 <exclude reference="g6x-q0-KHO"/>
-                                <exclude reference="gcH-w3-ZFE"/>
-                                <exclude reference="ll9-2F-sTA"/>
                                 <exclude reference="ng1-5W-aCK"/>
                                 <exclude reference="qma-nb-K9I"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="constraints">
+                                <exclude reference="92a-LN-Uf0"/>
                                 <include reference="ddY-uH-CMw"/>
+                                <exclude reference="XnB-5a-hu1"/>
                                 <include reference="ZXh-Cn-mC2"/>
                                 <include reference="4bq-kr-g8m"/>
+                                <exclude reference="z19-XM-niB"/>
+                                <exclude reference="8qb-XS-5XN"/>
                                 <include reference="g6x-q0-KHO"/>
+                                <exclude reference="gcH-w3-ZFE"/>
+                                <exclude reference="ll9-2F-sTA"/>
                                 <include reference="ng1-5W-aCK"/>
                                 <include reference="qma-nb-K9I"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="92a-LN-Uf0"/>
-                                <include reference="XnB-5a-hu1"/>
-                                <include reference="z19-XM-niB"/>
-                                <include reference="8qb-XS-5XN"/>
-                                <include reference="gcH-w3-ZFE"/>
-                                <include reference="ll9-2F-sTA"/>
+                                <exclude reference="92a-LN-Uf0"/>
+                                <include reference="ddY-uH-CMw"/>
+                                <exclude reference="XnB-5a-hu1"/>
+                                <include reference="ZXh-Cn-mC2"/>
+                                <include reference="4bq-kr-g8m"/>
+                                <exclude reference="z19-XM-niB"/>
+                                <exclude reference="8qb-XS-5XN"/>
+                                <include reference="g6x-q0-KHO"/>
+                                <exclude reference="gcH-w3-ZFE"/>
+                                <exclude reference="ll9-2F-sTA"/>
+                                <include reference="ng1-5W-aCK"/>
+                                <include reference="qma-nb-K9I"/>
                             </mask>
                         </variation>
                     </view>

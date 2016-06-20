@@ -19,7 +19,11 @@ public class ATLBaseViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         if Device.IS_5_5_INCHES() == true {
-            //iPhone 5.5 inch: Margin = 20 px
+            //iPhone 5.5 inch: H-Margin = 20px, V-Margin = 16px
+            metrics = ["margin":20.0]
+        }
+        else if Device.isPad() == true {
+            //iPhone 5.5 inch: Margin = 20px
             metrics = ["margin":20.0]
             margin = 20.0
         }
@@ -58,7 +62,7 @@ public class ATLBaseViewController: UIViewController {
             let constraint1 = NSLayoutConstraint.constraintsWithVisualFormat("H:|-margin-[view]",
                                                                              options: [], metrics: metrics, views: views)
             allConstraints += constraint1
-            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[topLayoutGuide]-margin-[view]",
+            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[topLayoutGuide]-(\(margin))-[view]",
                                                                              options: [], metrics: metrics, views: views)
             allConstraints += constraint2
             NSLayoutConstraint.activateConstraints(allConstraints)
@@ -91,7 +95,7 @@ public class ATLBaseViewController: UIViewController {
             let constraint1 = NSLayoutConstraint.constraintsWithVisualFormat("H:[view]-margin-|",
                                                                              options: [], metrics: metrics, views: views)
             allConstraints += constraint1
-            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[topLayoutGuide]-margin-[view]",
+            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[topLayoutGuide]-(\(margin))-[view]",
                                                                              options: [], metrics: metrics, views: views)
             allConstraints += constraint2
             NSLayoutConstraint.activateConstraints(allConstraints)
@@ -123,7 +127,7 @@ public class ATLBaseViewController: UIViewController {
             let constraint1 = NSLayoutConstraint.constraintsWithVisualFormat("H:[view]-margin-|",
                                                                              options: [], metrics: metrics, views: views)
             allConstraints += constraint1
-            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[view]-margin-[bottomLayoutGuide]",
+            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[view]-(\(margin))-[bottomLayoutGuide]",
                                                                              options: [], metrics: metrics, views: views)
             allConstraints += constraint2
             NSLayoutConstraint.activateConstraints(allConstraints)
@@ -155,7 +159,7 @@ public class ATLBaseViewController: UIViewController {
             let constraint1 = NSLayoutConstraint.constraintsWithVisualFormat("H:|-margin-[view]",
                                                                              options: [], metrics: metrics, views: views)
             allConstraints += constraint1
-            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[view]-margin-[bottomLayoutGuide]",
+            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[view]-(\(margin))-[bottomLayoutGuide]",
                                                                              options: [], metrics: metrics, views: views)
             allConstraints += constraint2
             NSLayoutConstraint.activateConstraints(allConstraints)
