@@ -243,6 +243,8 @@ struct Device {
         case Inches_4 = 568
         case Inches_4_7 = 667
         case Inches_5_5 = 736
+        case Inches_9_7 = 1024 //iPad or iPad mini 7.9 inch
+        case Inches_12_9 = 1366 //iPad pro
     }
     
     static func isSize(height: Heights) -> Bool {
@@ -330,6 +332,14 @@ struct Device {
     
     static func IS_5_5_INCHES_OR_SMALLER() -> Bool {
         return isPhone() && isSizeOrLarger(.Inches_5_5)
+    }
+    
+    static func IS_9_7_INCHES() -> Bool {
+        return isPad() && isSize(.Inches_9_7)
+    }
+    
+    static func IS_12_9_INCHES() -> Bool {
+        return isPad() && isSize(.Inches_12_9)
     }
     
     // MARK: - International Checks

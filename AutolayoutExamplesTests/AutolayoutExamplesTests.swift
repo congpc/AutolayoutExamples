@@ -28,7 +28,38 @@ class AutolayoutExamplesTests: XCTestCase {
     func createPinLabelRect(tag:Int) -> CGRect {
         //Check with iPhone 4s and iPhone 6
         
-        if Device.isPad() == true {
+        if Device.IS_12_9_INCHES() == true {
+            switch tag {
+            case 102:
+                //Right top
+                return CGRectMake(931.5, 40.0, 72.5, 20.0)
+            case 103:
+                //Right bottom
+                return CGRectMake(902.5, 1326.0, 101.5, 20.0)
+            case 104:
+                //Left bottom
+                return CGRectMake(20.0, 1326.0, 90.5, 20.0)
+            case 105:
+                //Left CenterY
+                return CGRectMake(20.0, 673.0, 96.0, 20.0)
+            case 106:
+                //CenterX Top
+                return CGRectMake(465.0, 40.0, 94.0, 20.0)
+            case 107:
+                //Right CenterY
+                return CGRectMake(897.0, 673.0, 107.0, 20.0)
+            case 108:
+                //CenterX Bottom
+                return CGRectMake(451.0, 1326.0, 122.5, 20.0)
+            case 109:
+                //Center
+                return CGRectMake(486.5, 673.0, 51.5, 20.0)
+            default:
+                //Left top
+                return CGRectMake(20.0, 40.0, 61.5, 20.0)
+            }
+        }
+        else if Device.isPad() == true {
             switch tag {
             case 102:
                 //Right top
