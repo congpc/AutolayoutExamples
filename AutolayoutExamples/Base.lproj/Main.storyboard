@@ -445,14 +445,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="106" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6:CenterY" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLJ-mC-hF9">
-                                <rect key="frame" x="10" y="248" width="76.5" height="20"/>
+                                <rect key="frame" x="20" y="248" width="76.5" height="20"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="107" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7:Baseline" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1WW-cu-zMI">
-                                <rect key="frame" x="500.5" y="263.5" width="79" height="20"/>
+                                <rect key="frame" x="511" y="263.5" width="79" height="20"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -465,14 +465,10 @@
                             <constraint firstItem="hjn-YV-Nfd" firstAttribute="bottom" secondItem="hea-Di-p8T" secondAttribute="bottom" id="2Id-BT-HMk"/>
                             <constraint firstItem="E1E-TL-tTa" firstAttribute="centerY" secondItem="sLJ-mC-hF9" secondAttribute="centerY" id="4I8-n9-H7I"/>
                             <constraint firstItem="TSf-Dj-xKJ" firstAttribute="top" secondItem="hea-Di-p8T" secondAttribute="top" id="4UW-Vj-wZj"/>
-                            <constraint firstItem="1WW-cu-zMI" firstAttribute="trailing" secondItem="hjn-YV-Nfd" secondAttribute="trailing" id="5fX-XY-Rl6">
-                                <variation key="widthClass=compact" constant="10"/>
-                            </constraint>
+                            <constraint firstItem="1WW-cu-zMI" firstAttribute="trailing" secondItem="hjn-YV-Nfd" secondAttribute="trailing" constant="10" id="5fX-XY-Rl6"/>
                             <constraint firstItem="TSf-Dj-xKJ" firstAttribute="trailing" secondItem="psH-tw-Ccp" secondAttribute="trailing" id="AwI-hI-BFE"/>
                             <constraint firstItem="psH-tw-Ccp" firstAttribute="leading" secondItem="hea-Di-p8T" secondAttribute="leading" id="GL0-YC-nD8"/>
-                            <constraint firstItem="psH-tw-Ccp" firstAttribute="leading" secondItem="sLJ-mC-hF9" secondAttribute="leading" constant="10" id="I45-Fp-qgP">
-                                <variation key="widthClass=compact" constant="0.0"/>
-                            </constraint>
+                            <constraint firstItem="psH-tw-Ccp" firstAttribute="leading" secondItem="sLJ-mC-hF9" secondAttribute="leading" id="I45-Fp-qgP"/>
                             <constraint firstItem="TSf-Dj-xKJ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="hea-Di-p8T" secondAttribute="trailing" priority="250" constant="30" id="QEv-Me-3aK"/>
                             <constraint firstItem="hea-Di-p8T" firstAttribute="top" secondItem="fP5-Sc-hao" secondAttribute="bottom" constant="20" id="cbg-uN-dEK"/>
                             <constraint firstItem="hea-Di-p8T" firstAttribute="leading" secondItem="Uui-mg-NH5" secondAttribute="leadingMargin" id="dz2-7p-GhM"/>

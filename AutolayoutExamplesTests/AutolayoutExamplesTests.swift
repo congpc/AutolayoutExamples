@@ -221,7 +221,59 @@ class AutolayoutExamplesTests: XCTestCase {
     func createAlignmentLabelRect(tag:Int) -> CGRect {
         //Check with iPhone 4s and iPhone 6
         
-        if Device.IS_5_5_INCHES() == true {
+        if Device.IS_12_9_INCHES() == true {
+            //5.5 inch
+            switch tag {
+            case 102:
+                //2:Top Edges
+                return CGRectMake(126.5, 40.0, 94.5, 20.0)
+            case 103:
+                //3:Leading + Trailing Edges
+                return CGRectMake(20.0, 130.0, 201.0, 20.0)
+            case 104:
+                //4:Bottom Edges
+                return CGRectMake(880.5, 70.0, 123.5, 20.0)
+            case 105:
+                //5:CenterX
+                return CGRectMake(136.0, 190.0, 76.0, 50.0)
+            case 106:
+                //6:CenterY
+                return CGRectMake(20.0, 205.0, 76.5, 20.0)
+            case 107:
+                //7:Baseline
+                return CGRectMake(935.0, 220.0, 79.0, 20.0)
+            default:
+                //1:Left top
+                return CGRectMake(20.0, 40.0, 76.0, 50.0)
+            }
+        }
+        else if Device.isPad() == true {
+            //5.5 inch
+            switch tag {
+            case 102:
+                //2:Top Edges
+                return CGRectMake(126.0, 40.0, 95.0, 20.0)
+            case 103:
+                //3:Leading + Trailing Edges
+                return CGRectMake(20.0, 130.0, 201.0, 20.0)
+            case 104:
+                //4:Bottom Edges
+                return CGRectMake(624.0, 70.0, 124.0, 20.0)
+            case 105:
+                //5:CenterX
+                return CGRectMake(136.0, 190.0, 76.0, 50.0)
+            case 106:
+                //6:CenterY
+                return CGRectMake(20.0, 205.0, 77.0, 20.0)
+            case 107:
+                //7:Baseline
+                return CGRectMake(679.0, 220.0, 79.0, 20.0)
+            default:
+                //1:Left top
+                return CGRectMake(20.0, 40.0, 76.0, 50.0)
+            }
+        }
+        else if Device.IS_5_5_INCHES() == true {
             //5.5 inch
             switch tag {
             case 102:
@@ -249,20 +301,6 @@ class AutolayoutExamplesTests: XCTestCase {
         }
         else if Device.IS_4_7_INCHES() == true {
             //iPhone 4.7 inch
-            /*(16.0, 40.0, 75.0, 50.0) - (16.0, 36.0, 76.0, 50.0)
-             /Users/congpc/github/AutolayoutExamples/AutolayoutExamplesTests/AutolayoutExamplesTests.swift:412: error: -[AutolayoutExamplesTests.AutolayoutExamplesTests testAutolayout_Alignment_Storyboard] : XCTAssertTrue failed - Label with tag 101 is wrong position
-             (123.0, 40.0, 95.5, 20.5) - (122.5, 36.0, 94.5, 20.0)
-             /Users/congpc/github/AutolayoutExamples/AutolayoutExamplesTests/AutolayoutExamplesTests.swift:412: error: -[AutolayoutExamplesTests.AutolayoutExamplesTests testAutolayout_Alignment_Storyboard] : XCTAssertTrue failed - Label with tag 102 is wrong position
-             (16.0, 130.0, 202.5, 20.5) - (16.0, 126.0, 201.0, 20.0)
-             /Users/congpc/github/AutolayoutExamples/AutolayoutExamplesTests/AutolayoutExamplesTests.swift:412: error: -[AutolayoutExamplesTests.AutolayoutExamplesTests testAutolayout_Alignment_Storyboard] : XCTAssertTrue failed - Label with tag 103 is wrong position
-             (235.5, 69.5, 123.5, 20.5) - (235.5, 66.0, 123.5, 20.0)
-             /Users/congpc/github/AutolayoutExamples/AutolayoutExamplesTests/AutolayoutExamplesTests.swift:412: error: -[AutolayoutExamplesTests.AutolayoutExamplesTests testAutolayout_Alignment_Storyboard] : XCTAssertTrue failed - Label with tag 104 is wrong position
-             (132.0, 190.5, 77.5, 50.0) - (132.0, 186.0, 76.0, 50.0)
-             /Users/congpc/github/AutolayoutExamples/AutolayoutExamplesTests/AutolayoutExamplesTests.swift:412: error: -[AutolayoutExamplesTests.AutolayoutExamplesTests testAutolayout_Alignment_Storyboard] : XCTAssertTrue failed - Label with tag 105 is wrong position
-             (16.0, 205.5, 77.5, 20.5) - (6.0, 201.0, 76.5, 20.0)
-             /Users/congpc/github/AutolayoutExamples/AutolayoutExamplesTests/AutolayoutExamplesTests.swift:412: error: -[AutolayoutExamplesTests.AutolayoutExamplesTests testAutolayout_Alignment_Storyboard] : XCTAssertTrue failed - Label with tag 106 is wrong position
-             (291.0, 220.0, 78.0, 20.5) - (280.0, 216.0, 79.0, 20.0)
-             /Users/congpc/github/AutolayoutExamples/AutolayoutExamplesTests/AutolayoutExamplesTests.swift:412: error: -[AutolayoutExamplesTests.AutolayoutExamplesTests testAutolayout_Alignment_Storyboard] : XCTAssertTrue failed - Label with tag 107 is wrong position*/
             switch tag {
             case 102:
                 //2:Top Edges
@@ -278,13 +316,13 @@ class AutolayoutExamplesTests: XCTestCase {
                 return CGRectMake(132, 186, 76, 50.0)
             case 106:
                 //6:CenterY
-                return CGRectMake(6, 201, 76.5, 20)
+                return CGRectMake(16.0, 201.0, 76.5, 20.0)
             case 107:
                 //7:Baseline
-                return CGRectMake(280, 216, 79, 20)
+                return CGRectMake(290.0, 216.0, 79.0, 20.0)
             default:
                 //1:Left top
-                return CGRectMake(16.0, 40.0, 75.0, 50.0)
+                return CGRectMake(16.0, 36.0, 76.0, 50.0)
             }
         }
         else if Device.IS_4_INCHES() == true {
@@ -298,19 +336,19 @@ class AutolayoutExamplesTests: XCTestCase {
                 return CGRectMake(16, 126, 201, 20)
             case 104:
                 //4:Bottom Edges
-                return CGRectMake(235.5, 66, 123.5, 20)
+                return CGRectMake(180.5, 66.0, 123.5, 20.0)
             case 105:
                 //5:CenterX
                 return CGRectMake(132, 186, 76, 50.0)
             case 106:
                 //6:CenterY
-                return CGRectMake(6, 201, 76.5, 20)
+                return CGRectMake(16.0, 201.0, 76.5, 20.0)
             case 107:
                 //7:Baseline
-                return CGRectMake(280, 216, 79, 20)
+                return CGRectMake(235.0, 216.0, 79.0, 20.0)
             default:
                 //1:Left top
-                return CGRectMake(16, 36, 76, 50.0)
+                return CGRectMake(16.0, 36.0, 76.0, 50.0)
             }
         }
         else {
@@ -324,19 +362,19 @@ class AutolayoutExamplesTests: XCTestCase {
                 return CGRectMake(16, 126, 201, 20)
             case 104:
                 //4:Bottom Edges
-                return CGRectMake(235.5, 66, 123.5, 20)
+                return CGRectMake(180.5, 66.0, 123.5, 20.0)
             case 105:
                 //5:CenterX
                 return CGRectMake(132, 186, 76, 50.0)
             case 106:
                 //6:CenterY
-                return CGRectMake(6, 201, 76.5, 20)
+                return CGRectMake(16.0, 201.0, 76.5, 20.0)
             case 107:
                 //7:Baseline
-                return CGRectMake(280, 216, 79, 20)
+                return CGRectMake(235.0, 216.0, 79.0, 20.0)
             default:
                 //1:Left top
-                return CGRectMake(16, 36, 76, 50.0)
+                return CGRectMake(16.0, 36.0, 76.0, 50.0)
             }
         }
     }
