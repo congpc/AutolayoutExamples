@@ -25,7 +25,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@congpc.ios" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyK-ix-Pvr">
-                                <rect key="frame" x="454" y="559" width="106" height="21"/>
+                                <rect key="frame" x="474" y="559" width="106" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.1047260373" green="0.2949635323" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -36,7 +36,7 @@
                             <constraint firstItem="5qi-N0-zdv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="BxH-ws-IFv"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="JyK-ix-Pvr" secondAttribute="bottom" constant="20" id="EXH-pf-M0x"/>
                             <constraint firstItem="5qi-N0-zdv" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="RrI-Ww-eAx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="JyK-ix-Pvr" secondAttribute="trailing" constant="20" id="VtC-FI-x9F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JyK-ix-Pvr" secondAttribute="trailing" id="VtC-FI-x9F"/>
                         </constraints>
                     </view>
                 </viewController>

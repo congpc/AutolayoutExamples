@@ -212,6 +212,7 @@
 					};
 					00C4ABEC1D03EE2B00B4BEAD = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = AT989KJ27T;
 					};
 				};
 			};
@@ -470,7 +471,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AutolayoutExamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = congpc.ios.AutolayoutExamples;
+				PRODUCT_BUNDLE_IDENTIFIER = com.congpc.ios.autolayout;
 				PRODUCT_NAME = AutolayoutExamples;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -483,7 +484,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AutolayoutExamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = congpc.ios.AutolayoutExamples;
+				PRODUCT_BUNDLE_IDENTIFIER = com.congpc.ios.autolayout;
 				PRODUCT_NAME = AutolayoutExamples;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

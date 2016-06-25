@@ -187,6 +187,17 @@ public class ATLBaseViewController: UIViewController {
     
     func configLeftCenterYConstraints(view:AnyObject) {
         switch constaintType {
+        case 1:
+            // Creating constraints using Visual Format Language: from iOS 6.0
+            let views : [String : AnyObject] = ["superview": self.view, "view": view]
+            var allConstraints = [NSLayoutConstraint]()
+            let constraint1 = NSLayoutConstraint.constraintsWithVisualFormat("H:|-margin-[view]",
+                                                                             options: [], metrics: metrics, views: views)
+            allConstraints += constraint1
+            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("H:[superview]-(<=0)-[view]",
+                                                                             options: .AlignAllCenterY, metrics: nil, views: views)
+            allConstraints += constraint2
+            NSLayoutConstraint.activateConstraints(allConstraints)
         case 2 where self.isIOS9 == true:
             if #available(iOS 9.0, *) {
                 // Creating the same constraints using Layout Anchors: from iOS 9.0
@@ -271,26 +282,26 @@ public class ATLBaseViewController: UIViewController {
         switch constaintType {
         case 1:
             // Creating constraints using Visual Format Language: from iOS 6.0
-//            let views : [String : AnyObject] = ["superview": self.view, "view": view]
-//            var allConstraints = [NSLayoutConstraint]()
-//            let constraint1 = NSLayoutConstraint.constraintsWithVisualFormat("H:[superview]-(<=0)-[view]",
-//                                                                             options: NSLayoutFormatOptions.AlignAllCenterY, metrics: nil, views: views)
-//            allConstraints += constraint1
-//            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[superview]-(<=0)-[view]",
-//                                                                             options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: views)
-//            allConstraints += constraint2
-//            NSLayoutConstraint.activateConstraints(allConstraints)
-            
-            //Way 2:Using Left view and Top view
-            let views : [String : AnyObject] = ["left": self.view.viewWithTag(105)!,"top": self.view.viewWithTag(106)!, "view": view]
+            let views : [String : AnyObject] = ["superview": self.view, "view": view]
             var allConstraints = [NSLayoutConstraint]()
-            let constraint1 = NSLayoutConstraint.constraintsWithVisualFormat("H:[view]-(<=0)-[left]",
+            let constraint1 = NSLayoutConstraint.constraintsWithVisualFormat("H:[superview]-(<=0)-[view]",
                                                                              options: NSLayoutFormatOptions.AlignAllCenterY, metrics: nil, views: views)
             allConstraints += constraint1
-            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[view]-(<=0)-[top]",
+            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[superview]-(<=0)-[view]",
                                                                              options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: views)
             allConstraints += constraint2
             NSLayoutConstraint.activateConstraints(allConstraints)
+            
+            //Way 2:Using Left view and Top view
+//            let views : [String : AnyObject] = ["left": self.view.viewWithTag(105)!,"top": self.view.viewWithTag(106)!, "view": view]
+//            var allConstraints = [NSLayoutConstraint]()
+//            let constraint1 = NSLayoutConstraint.constraintsWithVisualFormat("H:[view]-(<=0)-[left]",
+//                                                                             options: NSLayoutFormatOptions.AlignAllCenterY, metrics: nil, views: views)
+//            allConstraints += constraint1
+//            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[view]-(<=0)-[top]",
+//                                                                             options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: views)
+//            allConstraints += constraint2
+//            NSLayoutConstraint.activateConstraints(allConstraints)
             
         case 2 where self.isIOS9 == true:
             if #available(iOS 9.0, *) {
@@ -399,7 +410,6 @@ public class ATLBaseViewController: UIViewController {
             let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[thirdView]-(>=\(equalHeight))-[secondView]",
                                                                              options: NSLayoutFormatOptions.AlignAllTrailing, metrics: nil, views: views)
             allConstraints += constraint2
-            
             NSLayoutConstraint.activateConstraints(allConstraints)
         case 2 where self.isIOS9 == true:
             if #available(iOS 9.0, *) {
