@@ -218,6 +218,17 @@ public class ATLBaseViewController: UIViewController {
     
     func configCenterXTopConstraints(view:AnyObject) {
         switch constaintType {
+        case 1:
+            // Creating constraints using Visual Format Language: from iOS 6.0
+            let views : [String : AnyObject] = ["superview": self.view, "view": view,"topLayoutGuide": topLayoutGuide]
+            var allConstraints = [NSLayoutConstraint]()
+            let constraint1 = NSLayoutConstraint.constraintsWithVisualFormat("V:[topLayoutGuide]-margin-[view]",
+                                                                             options: [], metrics: metrics, views: views)
+            allConstraints += constraint1
+            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[superview]-(<=0)-[view]",
+                                                                             options: .AlignAllCenterX, metrics: nil, views: views)
+            allConstraints += constraint2
+            NSLayoutConstraint.activateConstraints(allConstraints)
         case 2 where self.isIOS9 == true:
             if #available(iOS 9.0, *) {
                 // Creating the same constraints using Layout Anchors: from iOS 9.0
@@ -239,6 +250,17 @@ public class ATLBaseViewController: UIViewController {
     
     func configRightCenterYConstraints(view:AnyObject) {
         switch constaintType {
+        case 1:
+            // Creating constraints using Visual Format Language: from iOS 6.0
+            let views : [String : AnyObject] = ["superview": self.view, "view": view]
+            var allConstraints = [NSLayoutConstraint]()
+            let constraint1 = NSLayoutConstraint.constraintsWithVisualFormat("H:[view]-margin-|",
+                                                                             options: [], metrics: metrics, views: views)
+            allConstraints += constraint1
+            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("H:[superview]-(<=0)-[view]",
+                                                                             options: .AlignAllCenterY, metrics: nil, views: views)
+            allConstraints += constraint2
+            NSLayoutConstraint.activateConstraints(allConstraints)
         case 2 where self.isIOS9 == true:
             if #available(iOS 9.0, *) {
                 // Creating the same constraints using Layout Anchors: from iOS 9.0
@@ -259,6 +281,17 @@ public class ATLBaseViewController: UIViewController {
     
     func configCenterXBottomConstraints(view:AnyObject) {
         switch constaintType {
+        case 1:
+            // Creating constraints using Visual Format Language: from iOS 6.0
+            let views : [String : AnyObject] = ["superview": self.view, "view": view ,"bottomLayoutGuide": bottomLayoutGuide]
+            var allConstraints = [NSLayoutConstraint]()
+            let constraint1 = NSLayoutConstraint.constraintsWithVisualFormat("V:[view]-margin-[bottomLayoutGuide]",
+                                                                             options: [], metrics: metrics, views: views)
+            allConstraints += constraint1
+            let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[superview]-(<=0)-[view]",
+                                                                             options: .AlignAllCenterX, metrics: nil, views: views)
+            allConstraints += constraint2
+            NSLayoutConstraint.activateConstraints(allConstraints)
         case 2 where self.isIOS9 == true:
             if #available(iOS 9.0, *) {
                 // Creating the same constraints using Layout Anchors: from iOS 9.0
