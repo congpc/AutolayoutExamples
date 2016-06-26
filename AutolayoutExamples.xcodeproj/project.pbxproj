@@ -19,6 +19,7 @@
 		00D9117F1D0C5DBC00DDA5DC /* ATLBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9117E1D0C5DBC00DDA5DC /* ATLBaseViewController.swift */; };
 		00DC64CC1D1598850069D127 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DC64CB1D1598850069D127 /* UIDeviceExtension.swift */; };
 		00DC64CD1D15993D0069D127 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DC64CB1D1598850069D127 /* UIDeviceExtension.swift */; };
+		00E1A4FB1D1FAC2100B7966A /* ATLProgramatical3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A4FA1D1FAC2100B7966A /* ATLProgramatical3ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		00D9117C1D0C5D8800DDA5DC /* ATLProgramatical2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATLProgramatical2ViewController.swift; sourceTree = "<group>"; };
 		00D9117E1D0C5DBC00DDA5DC /* ATLBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATLBaseViewController.swift; sourceTree = "<group>"; };
 		00DC64CB1D1598850069D127 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
+		00E1A4FA1D1FAC2100B7966A /* ATLProgramatical3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATLProgramatical3ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,15 +105,16 @@
 		00BDB9AE1D046AD500B10EC0 /* AutolayoutExamples */ = {
 			isa = PBXGroup;
 			children = (
-				00DC64CB1D1598850069D127 /* UIDeviceExtension.swift */,
 				00BDB9AF1D046AD500B10EC0 /* AppDelegate.swift */,
 				00BDB9B01D046AD500B10EC0 /* Assets.xcassets */,
 				00D9117E1D0C5DBC00DDA5DC /* ATLBaseViewController.swift */,
 				00BDB9B11D046AD500B10EC0 /* ATLProgramatical1ViewController.swift */,
 				00D9117C1D0C5D8800DDA5DC /* ATLProgramatical2ViewController.swift */,
+				00E1A4FA1D1FAC2100B7966A /* ATLProgramatical3ViewController.swift */,
 				00BDB9B61D046AD500B10EC0 /* Info.plist */,
 				00BDB9B21D046AD500B10EC0 /* LaunchScreen.storyboard */,
 				00BDB9B41D046AD500B10EC0 /* Main.storyboard */,
+				00DC64CB1D1598850069D127 /* UIDeviceExtension.swift */,
 			);
 			path = AutolayoutExamples;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				00DC64CC1D1598850069D127 /* UIDeviceExtension.swift in Sources */,
 				00D9117D1D0C5D8800DDA5DC /* ATLProgramatical2ViewController.swift in Sources */,
 				00D9117F1D0C5DBC00DDA5DC /* ATLBaseViewController.swift in Sources */,
+				00E1A4FB1D1FAC2100B7966A /* ATLProgramatical3ViewController.swift in Sources */,
 				00BDB9B71D046AD500B10EC0 /* AppDelegate.swift in Sources */,
 				00BDB9B91D046AD500B10EC0 /* ATLProgramatical1ViewController.swift in Sources */,
 			);

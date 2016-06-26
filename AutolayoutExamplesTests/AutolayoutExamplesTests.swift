@@ -26,9 +26,8 @@ class AutolayoutExamplesTests: XCTestCase {
     
     //MARK: - Helpers
     func createPinLabelRect(tag:Int) -> CGRect {
-        //Check with iPhone 4s and iPhone 6
-        
         if Device.IS_12_9_INCHES() == true {
+            //12.9 inch
             switch tag {
             case 102:
                 //Right top
@@ -60,6 +59,7 @@ class AutolayoutExamplesTests: XCTestCase {
             }
         }
         else if Device.isPad() == true {
+            //7.9 inch or 9.7 inch
             switch tag {
             case 102:
                 //Right top
@@ -91,6 +91,7 @@ class AutolayoutExamplesTests: XCTestCase {
             }
         }
         else if Device.IS_5_5_INCHES() == true {
+            //5.5 inch
             switch tag {
             case 102:
                 //Right top
@@ -122,6 +123,7 @@ class AutolayoutExamplesTests: XCTestCase {
             }
         }
         else if Device.IS_4_7_INCHES() == true {
+            //4.7 inch
             switch tag {
             case 102:
                 //Right top
@@ -219,10 +221,8 @@ class AutolayoutExamplesTests: XCTestCase {
     }
     
     func createAlignmentLabelRect(tag:Int) -> CGRect {
-        //Check with iPhone 4s and iPhone 6
-        
         if Device.IS_12_9_INCHES() == true {
-            //5.5 inch
+            //12.9 inch
             switch tag {
             case 102:
                 //2:Top Edges
@@ -248,7 +248,7 @@ class AutolayoutExamplesTests: XCTestCase {
             }
         }
         else if Device.isPad() == true {
-            //5.5 inch
+            //7.9 inch or 9.7 inch
             switch tag {
             case 102:
                 //2:Top Edges
@@ -375,6 +375,42 @@ class AutolayoutExamplesTests: XCTestCase {
             default:
                 //1:Left top
                 return CGRectMake(16.0, 36.0, 76.0, 50.0)
+            }
+        }
+    }
+    
+    func createRatioLabelRect(tag:Int) -> CGRect {
+        if Device.isPad() == true {
+            //iPad
+            switch tag {
+            case 102:
+                //2:View 2
+                return CGRectMake(110, 40, 140, 210)
+            default:
+                //1:View 1
+                return CGRectMake(20, 40, 70, 70)
+            }
+        }
+        else if Device.IS_5_5_INCHES() == true {
+            //5.5 inch
+            switch tag {
+            case 102:
+                //2:View 2
+                return CGRectMake(110, 36, 140, 210)
+            default:
+                //1:View 1
+                return CGRectMake(20, 36, 70, 70)
+            }
+        }
+        else {
+            //4.7 inch, 4 inch, 3.5 inch
+            switch tag {
+            case 102:
+                //2:View 2
+                return CGRectMake(106, 36, 140, 210)
+            default:
+                //1:View 1
+                return CGRectMake(16, 36, 70, 70)
             }
         }
     }
@@ -509,6 +545,58 @@ class AutolayoutExamplesTests: XCTestCase {
             
             let rect1 = (subView?.frame)!
             let rect2 = self.createAlignmentLabelRect((subView?.tag)!)
+            let result = CGRectEqualToRect(rect1, rect2)
+            if result == false {
+                print("\(rect1) - \(rect2)")
+            }
+            XCTAssertTrue(result, "Label with tag \(i) is wrong position")
+        }
+    }
+    
+    //MARK: - RatioViewControllers
+    func testAutolayout_Ratio_Storyboard() {
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("ratioViewController1")
+        UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
+        viewController.view.layoutIfNeeded()
+        for i in 101...102 {
+            let subView = viewController.view.viewWithTag(i)
+            
+            let rect1 = (subView?.frame)!
+            let rect2 = self.createRatioLabelRect((subView?.tag)!)
+            let result = CGRectEqualToRect(rect1, rect2)
+            if result == false {
+                print("\(rect1) - \(rect2)")
+            }
+            XCTAssertTrue(result, "Label with tag \(i) is wrong position")
+        }
+    }
+    
+    func testAutolayout_Ratio_LayoutConstraint() {
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("ratioViewController2")
+        UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
+        viewController.view.layoutIfNeeded()
+        for i in 101...102 {
+            let subView = viewController.view.viewWithTag(i)
+            
+            let rect1 = (subView?.frame)!
+            let rect2 = self.createRatioLabelRect((subView?.tag)!)
+            let result = CGRectEqualToRect(rect1, rect2)
+            if result == false {
+                print("\(rect1) - \(rect2)")
+            }
+            XCTAssertTrue(result, "Label with tag \(i) is wrong position")
+        }
+    }
+
+    func testAutolayout_Ratio_LayoutAnchor() {
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("ratioViewController3")
+        UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
+        viewController.view.layoutIfNeeded()
+        for i in 101...102 {
+            let subView = viewController.view.viewWithTag(i)
+            
+            let rect1 = (subView?.frame)!
+            let rect2 = self.createRatioLabelRect((subView?.tag)!)
             let result = CGRectEqualToRect(rect1, rect2)
             if result == false {
                 print("\(rect1) - \(rect2)")

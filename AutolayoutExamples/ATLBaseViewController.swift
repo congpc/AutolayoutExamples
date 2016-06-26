@@ -45,6 +45,7 @@ public class ATLBaseViewController: UIViewController {
         //Create label
         let label = UILabel()
         label.text = text
+        label.textAlignment = .Center
         label.font = UIFont(name: "HelveticaNeue", size: 17)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = color
@@ -52,7 +53,7 @@ public class ATLBaseViewController: UIViewController {
         return label
     }
     
-    //MARK: - ViewController 1
+    //MARK: - ViewController 1: Pin
     func configLeftTopConstraints(view:AnyObject) {
         switch constaintType {
         case 1:
@@ -354,7 +355,7 @@ public class ATLBaseViewController: UIViewController {
         }
     }
     
-    //MARK: - ViewController 2
+    //MARK: - ViewController 2: Alignment
     //self.config1LeftTopConstraints(leftTopLabel,50)
     func config1LeftTopConstraints(view:AnyObject,_ equalHeight:CGFloat) {
         switch constaintType {
@@ -583,4 +584,67 @@ public class ATLBaseViewController: UIViewController {
                                attribute: .Trailing, multiplier: 1.0, constant: 10).active = true
         }
     }
+    
+    //MARK: - ViewController 3: Ratio
+    func configRatioConstraints(view:AnyObject) {
+        switch constaintType {
+        case 2 where self.isIOS9 == true:
+            if #available(iOS 9.0, *) {
+                // Creating the same constraints using Layout Anchors: from iOS 9.0
+                // Pin by Left and Top
+                view.leadingAnchor.constraintEqualToAnchor(self.view.layoutMarginsGuide.leadingAnchor).active = true
+                view.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: margin).active = true
+                
+                // Fix width = 70px
+                view.heightAnchor.constraintEqualToAnchor(nil, constant: 70).active = true
+                
+                // Fix ratio 1:1
+                view.widthAnchor.constraintEqualToAnchor(view.heightAnchor).active = true
+            }
+        default:
+            // Creating constraints using NSLayoutConstraint: from iOS 6.0
+            // Pin by Left and Top
+            NSLayoutConstraint(item: view, attribute: .Leading, relatedBy: .Equal, toItem: self.view,
+                               attribute: .LeadingMargin, multiplier: 1.0, constant: 0).active = true
+            NSLayoutConstraint(item: view, attribute: .Top, relatedBy: .Equal, toItem: self.topLayoutGuide,
+                               attribute: .Bottom, multiplier: 1.0, constant: margin).active = true
+            // Fix width = 70px
+            NSLayoutConstraint(item: view, attribute: .Width, relatedBy: .Equal, toItem: nil,
+                               attribute: .NotAnAttribute, multiplier: 1.0, constant: 70).active = true
+            // Fix ratio 1:1
+            NSLayoutConstraint(item: view, attribute: .Width, relatedBy: .Equal, toItem: view,
+                               attribute: .Height, multiplier: 1.0, constant: 0).active = true
+        }
+    }
+    
+    func configRatioWithEqualWidthsHeightsConstraints(firstView:AnyObject, _ secondView:AnyObject) {
+        switch constaintType {
+        case 2 where self.isIOS9 == true:
+            if #available(iOS 9.0, *) {
+                // Creating the same constraints using Layout Anchors: from iOS 9.0
+                // Pin by Left and Top
+                secondView.topAnchor.constraintEqualToAnchor(firstView.topAnchor).active = true
+                secondView.leadingAnchor.constraintEqualToAnchor(firstView.trailingAnchor, constant: 20).active = true
+                
+                // Fix ratio 2:3 of secondview with firstview
+                secondView.widthAnchor.constraintEqualToAnchor(firstView.widthAnchor, multiplier: 2).active = true
+                secondView.heightAnchor.constraintEqualToAnchor(firstView.heightAnchor, multiplier: 3).active = true
+            }
+        default:
+            // Creating constraints using NSLayoutConstraint: from iOS 6.0
+            // Pin by Left and Top
+            NSLayoutConstraint(item: secondView, attribute: .Top, relatedBy: .Equal, toItem: firstView,
+                               attribute: .Top, multiplier: 1.0, constant: 0).active = true
+            
+            NSLayoutConstraint(item: secondView, attribute: .Leading, relatedBy: .Equal, toItem: firstView,
+                               attribute: .Trailing, multiplier: 1.0, constant: 20).active = true
+            
+            // Fix ratio 2:3 of secondview with firstview
+            NSLayoutConstraint(item: secondView, attribute: .Width, relatedBy: .Equal, toItem: firstView,
+                               attribute: .Width, multiplier: 2.0, constant: 0).active = true
+            NSLayoutConstraint(item: secondView, attribute: .Height, relatedBy: .Equal, toItem: firstView,
+                               attribute: .Height, multiplier: 3.0, constant: 0).active = true
+        }
+    }
+    
 }
